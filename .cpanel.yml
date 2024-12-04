@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - explort DEPLOYPATH=/home/psycultu/psyanimeawards
+    - /bin/cp * $DEPLOYPATH
