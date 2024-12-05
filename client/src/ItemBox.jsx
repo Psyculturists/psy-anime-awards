@@ -34,9 +34,9 @@ function ItemContent(props){
 
     const [authMethods, setAuthMethods] = useState(
         {
-            discord: true,
+            discord: false,
             twitch: false,
-            discordMember: true,
+            discordMember: false,
             twitchFollower: false,
         }
     ); //["Google", "Discord", "Twitch"]
