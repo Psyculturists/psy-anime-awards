@@ -31,12 +31,22 @@ function ItemDescription(props){
 }
 
 function ItemContent(props){
+
+    const [authMethods, setAuthMethods] = useState(
+        {
+            google: false,
+            discord: false,
+            twitch: false
+        }
+    ); //["Google", "Discord", "Twitch"]
+
     return(
         <div className="item-content">
-            {/* <ItemInput index = {props.index}/> */}
-            <ItemInputLocked index = {props.index} method="Google" icon="cib:google"/>
-            <ItemInputLocked index = {props.index} method="Discord" icon="cib:discord"/>
-            <ItemInputLocked index = {props.index} method="Twitch" icon="cib:twitch"/>
+            {authMethods.google ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} method="Google" icon="cib:google"/>}
+            {authMethods.discord ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} method="Discord" icon="cib:discord"/>}
+            {authMethods.twitch ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} method="Twitch" icon="cib:twitch"/>}
+            
+            
         </div>
     )
 }

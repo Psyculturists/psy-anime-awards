@@ -57,13 +57,17 @@ hr {
 }
 
 ::selection{
-  background-color: #10122d;
-  -webkit-text-fill-color: #ffd478;
-  color: #ffd478;
+  /* background-color: #10122d; */
+  background-color: #000;
+  /* -webkit-text-fill-color: #ffd478; */
+  -webkit-text-fill-color: #ffad00;
+  /* color: #ffd478; */
+  color:#ffad00;
 }
 
 p::selection{
-  background-color: #10122d;
+  /* background-color: #10122d; */
+  background-color: #000;
   -webkit-text-fill-color: white;
   color: white;
 }
@@ -90,14 +94,14 @@ p::selection{
   max-height: 70px;
   offset-position: 50% 100%;
   offset-path: ray(45deg);
-  background-color: #130c02;
+  background-color: #0c0d18;
 
 }
 
 .logo::before{
   content: '';
   position: absolute;
-  background-color: #130c02;
+  background-color: #0c0d18;
   /* box-shadow: 0px 0px 10px 2px black; */
   box-shadow: -6px 7px 20px 3px #000;
   top: -10px;
@@ -295,14 +299,18 @@ p::selection{
 .log-in-button{
   width: 100%;
   /* font-size: 1.8em; */
+  cursor: pointer;
   padding: 20px;
-  background-color: #dddddd88;
-  color: #0c0d18;
+  border: none;
+  background-color: transparent;
+  color: #ffad00;
+  background-image: linear-gradient(90deg,transparent 0%, #000 40%,transparent 50%, #000 60%,transparent 100%);
 }
 
 .log-in-field{
   text-wrap: nowrap;
   overflow: hidden;
+  
   /* display: flex; */
   /* justify-content: stretch; */
 }
