@@ -284,40 +284,46 @@ p::selection{
 }
 
 .input-locked:hover .log-in-hover{
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .log-in-hover{
   display: none;
+  justify-content: space-evenly;
   position:absolute;
   top: 0;
   width: 100%;
   margin: 25px 0px;
+  background-image: linear-gradient(90deg,transparent 0%, #000 20%,#000 40%,transparent 50%,#000 60%, #000 80%,transparent 100%);
 }
 
 
 .log-in-button{
   width: 100%;
   /* font-size: 1.8em; */
-  cursor: pointer;
   padding: 20px;
   border: none;
   background-color: transparent;
+  color: #ffad00aa;
+}
+
+.log-in-button:hover{
   color: #ffad00;
-  background-image: linear-gradient(90deg,transparent 0%, #000 40%,transparent 50%, #000 60%,transparent 100%);
 }
 
 .log-in-field{
   text-wrap: nowrap;
   overflow: hidden;
+  cursor: pointer;
   
-  /* display: flex; */
-  /* justify-content: stretch; */
+  display: flex; 
+  justify-content: center;
 }
 
 .log-in-container{
   display: flex;
-  margin: 0 38%;
+  /* margin: 0 38%; */
 }
 
 .log-in-icon{

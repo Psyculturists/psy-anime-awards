@@ -34,17 +34,27 @@ function ItemContent(props){
 
     const [authMethods, setAuthMethods] = useState(
         {
-            google: false,
-            discord: false,
-            twitch: false
+            discord: true,
+            twitch: false,
+            discordMember: true,
+            twitchFollower: false,
         }
     ); //["Google", "Discord", "Twitch"]
 
     return(
         <div className="item-content">
-            {authMethods.google ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} method="Google" icon="cib:google"/>}
-            {authMethods.discord ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} method="Discord" icon="cib:discord"/>}
-            {authMethods.twitch ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} method="Twitch" icon="cib:twitch"/>}
+            {authMethods.discord || authMethods.twitch ? <ItemInput index = {props.index}/> : <ItemInputLocked index = {props.index} hover=<LoginCheck/> />}
+            {authMethods.discord || authMethods.twitch ? 
+            (authMethods.discordMember ? <ItemInput index = {props.index}/> :
+                <ItemInputLocked index = {props.index} hover=<CheckHover message="Join the Discord Server" icon="cib:discord"/> />
+            )
+            : <ItemInputLocked index = {props.index} hover=<LoginCheck/> />}
+            {authMethods.discord || authMethods.twitch ? 
+            (authMethods.twitchFollower ? <ItemInput index = {props.index}/> :
+                <ItemInputLocked index = {props.index} hover=<CheckHover message="Follow us on Twitch" icon="cib:twitch" />/>
+            )
+            : <ItemInputLocked index = {props.index} hover=<LoginCheck/> />}
+            
             
             
         </div>
@@ -65,10 +75,25 @@ function ItemInputLocked(props){
             <div className='input-locked'>
                 <input disabled="true" placeholder="Enter your Nomination" id={props.index}></input>
             <div className='log-in-hover'>
-                <LogInButton logtext={props.method} icon={props.icon}/>
+                {props.hover}
             </div>
             </div>
         </div>
+    )
+}
+
+function LoginCheck(){
+    return(
+        <>
+            <LogInButton logtext="Log in via Discord" icon="cib:discord"/>
+            <LogInButton logtext="Log in via Twitch" icon="cib:twitch"/>
+        </>
+    )
+}
+
+function CheckHover(props){
+    return(
+        <LogInButton logtext={props.message} icon={props.icon}/>
     )
 }
 
@@ -81,7 +106,7 @@ function LogInButton(props){
                         <span className='iconify' data-icon={props.icon}></span>
                     </div>
                     <div className='log-in-text'>
-                        Log in via {props.logtext}
+                        {props.logtext}
                     </div>
                 </div>
             </div>
