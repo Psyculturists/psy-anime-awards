@@ -1,17 +1,12 @@
+import BodyTitle from "./BodyTitle"
 import Categories from "./Categories"
-import ItemBox from "./ItemBox"
 
 
 function Body() {
 
   return (
     <>
-    <div>
-      <h1 className="title">
-        Psy Anime Awards
-      </h1>
-    </div>
-
+    <BodyTitle />
     <Categories/>
     
     </>
@@ -19,3 +14,6 @@ function Body() {
 }
 
 export default Body
+
+
+
