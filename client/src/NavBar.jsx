@@ -5,9 +5,9 @@ function NavBar(){
     return (
         <div className="nav-bar">
             <NavLink label="NOMINATE"/>
-            <NavLink label="ABOUT"/>
-            <Logo />
             <NavLink label="PARTNERS"/>
+            <Logo />
+            <NavLink label="ABOUT"/>
             <NavLink label="FAQ"/>
         </div>
     )
