@@ -3,7 +3,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 const root = resolve(__dirname, 'src')
-const outDir = resolve(__dirname, 'build')
+const outDir = resolve(__dirname, 'dist')
+
 
 export default defineConfig({
   base: "",
@@ -14,7 +15,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(root, 'index.html')
+        main: resolve(root, 'index.html'),
+        rootpage: resolve(root, 'rootpage', 'index.html')
       }
     }
   }
