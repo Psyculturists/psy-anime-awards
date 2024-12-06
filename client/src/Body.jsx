@@ -5,11 +5,11 @@ import Categories from "./Categories"
 function Body() {
 
   return (
-    <>
+    <div className="body">
     <BodyTitle />
     <Categories/>
     
-    </>
+    </div>
   )
 }
 

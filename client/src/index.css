@@ -5,10 +5,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #0e0800; */
-  /* background-color: #020312; */
-  /* background-color: #0c0d18; */
-  /* background-color: #11121d; */
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,9 +28,6 @@ body{
   width: 100%;
   height: 100%;
   background-color: #11121d;
-  /* background: linear-gradient(90deg,#1d1c11 5%,#11121d 25%,#11121d 75%, #1d1c11 95%); */
-  /* background-size: 50% 50%; */
-  /* animation: gradient-animation 150s ease infinite; */
 }
 
 @keyframes gradient-animation {
@@ -57,16 +50,12 @@ hr {
 }
 
 ::selection{
-  /* background-color: #10122d; */
   background-color: #000;
-  /* -webkit-text-fill-color: #ffd478; */
   -webkit-text-fill-color: #ffad00;
-  /* color: #ffd478; */
   color:#ffad00;
 }
 
 p::selection{
-  /* background-color: #10122d; */
   background-color: #000;
   -webkit-text-fill-color: white;
   color: white;
@@ -102,7 +91,6 @@ p::selection{
   content: '';
   position: absolute;
   background-color: #0c0d18;
-  /* box-shadow: 0px 0px 10px 2px black; */
   box-shadow: -6px 7px 20px 3px #000;
   top: -10px;
   left: -10px;
@@ -163,8 +151,6 @@ p::selection{
 }
 
 .nav-link{
-  /* background: linear-gradient(180deg,#d18125 0%,#f0d8ab 33%,#754c12 54%,#e7af47 77%,#d18f00 100%); */
-  /* background-image: linear-gradient(180deg,#ffffff 40%,#ffad00 50%,#004eff 50%, #ffffff 60%); */
   background-image: linear-gradient(180deg, rgba(255,227,167,1) 0%, rgba(253,187,45,1) 8%, rgba(157,106,0,1) 20%, rgba(255,227,167,1) 29%, rgba(253,187,45,1) 45%,rgba(157,106,0,1) 51%, #000 52%, #000 54%, rgba(157,106,0,1) 55%, rgba(253,187,45,1) 75%, #000 76%, #000 78%,rgba(253,187,45,1) 79%, rgba(255,227,167,1) 83%, rgba(157,106,0,1) 98%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -178,7 +164,6 @@ p::selection{
   content: '';
   display: block;
   border-style: none;
-  /* background-image: linear-gradient(270deg,rgb(0, 0, 0) 0%,#ffad00 15%,white 45%,white 55%,#004eff 85%, rgb(0, 0, 0) 100%); */
   background-image: linear-gradient(270deg,rgb(0, 0, 0) 0%,#ffad00 15%,#004eff 85%, rgb(0, 0, 0) 100%);
   height: 1px;
   width: 100%;
@@ -188,23 +173,117 @@ p::selection{
 .title {
   text-align: center;
   text-transform: uppercase;
-  /* background-image: linear-gradient(180deg,#080808 5%, #004eff 20%, #ffffff 35%,#8a8a8a 40%,#080808 60%,#ffffff 65%,#ffad00 80%,#080808 95%); */
-  /* background-image: linear-gradient(180deg,#ffffff 52%,#000000 53%,#000000 55%, #ffffff 56%); */
   background-image: linear-gradient(180deg, rgba(255,227,167,1) 0%, rgba(253,187,45,1) 8%, rgba(157,106,0,1) 20%,rgba(255,227,167,1) 25%, #000 26%, #000 28%, rgba(255,227,167,1) 29%, rgba(253,187,45,1) 45%,rgba(157,106,0,1) 51%, #000 52%, #000 54%, rgba(157,106,0,1) 55%, rgba(253,187,45,1) 76%, #000 77%, #000 79%,rgba(253,187,45,1) 80%, rgba(255,227,167,1) 83%, rgba(157,106,0,1) 98%);
   font-size: 5em;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.body-title{
+  position: relative;
+  overflow: hidden;
+  /* border: 1.5px solid #ffad00; */
+  box-shadow: inset 0px 0px 20px 9px #00000088;
+}
+
+.effect-container{
+  position: absolute;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  z-index: -1;
+  /* top: 50%; */
+  offset-position: 50% 50%;
+  offset-path: ray(90deg);
+  justify-content: space-evenly;
+  /* animation: rotation-animation 5s ease infinite;
+  animation-direction: alternate; */
+}
+
+.effect-container-rot{
+  position: absolute;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  z-index: -1;
+  /* top: 50%; */
+  offset-position: 50% 50%;
+  offset-path: ray(90deg);
+  justify-content: space-evenly;
+  animation: rotation-animation 60s ease infinite;
+  animation-direction: alternate;
+}
+
+.effect{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  rotate: 45deg;
+  z-index: -1;
+  align-self: center;
+  /* border-left: 1.5px solid #004eff;
+  border-top: 1.5px solid #004eff;
+  border-right: 1.5px solid #ffad00;
+  border-bottom: 1.5px solid #ffad00; */
+  border: 1.5px solid #ffad00;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px 9px #ffad00aa;
+  animation: size-animation 5s ease-out infinite;
+  background-image: radial-gradient(#fff, #f1c462, #ffad00);
+  animation-direction: alternate;
+}
+
+/* .effect::before{
+  content:'';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  rotate: 45deg;
+  align-self: center;
+
+  border: 1.5px solid #ffad00;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 20px 9px #ffad00aa;
+  animation: size-animation 8s ease-out infinite, rotation-animation 2s ease infinite;
+} */
+
+@keyframes size-animation {
+  0% {
+    height: 5px;
+    width: 5px;
+    transform: translate(0px, -200px);
+  }
+  50% {
+    height: 15px;
+    width: 15px;
+    transform: translate(0px, 200px);
+  }
+  100% {
+    height: 0px;
+    width: 0px;
+    transform: translate(0px, -200px);
+  }
+}
+
+@keyframes rotation-animation {
+  0% {
+    rotate: 45deg;
+  }
+  50% {
+  }
+  100% {
+    rotate: 405deg;
+  }
+}
+
+
+
 .item-box{
   width: auto;
-  /* height: 50vh; */
   background-color: #0c0d18;
   margin: 100px 100px;
   padding: 20px;
-  /* border: 1px solid; */
-  /* border-image-slice: 1;
-  border-image-source: linear-gradient(270deg,#ffad00 5%,#ffad00 45%,#004eff 55%,#004eff 95%); */
   box-shadow: inset 0px 0px 12px 2px #000;
 
 
@@ -232,10 +311,6 @@ p::selection{
 .item-name h1{
   text-align: center;
   text-transform: uppercase;
-  /* background-image: linear-gradient(180deg,#ffffff 52%,#000000 53%,#000000 55%, #ffffff 56%); */
-  /* background-image: linear-gradient(180deg,#fff 24%,#000 25%, #000 27%,#fff 28%, #ffffff 52%,#000000 53%,#000000 55%, #ffffff 56%);  */
-  /* background-image: linear-gradient(180deg, #ffcc5d 24%,#000 25%, #000 27%,#fabc36 28%, #cc8d05 52%,#000000 53%,#000000 55%, #9c6b01 56%); */
-  /* background-image: linear-gradient(180deg, rgba(255,227,167,1) 0%, rgba(253,187,45,1) 8%, rgba(157,106,0,1) 20%, rgba(255,227,167,1) 35%, rgba(253,187,45,1) 45%, rgba(157,106,0,1) 55%, rgba(253,187,45,1) 67%, rgba(255,227,167,1) 83%, rgba(157,106,0,1) 98%); */
   background-image: linear-gradient(180deg, rgba(255,227,167,1) 0%, rgba(253,187,45,1) 8%, rgba(157,106,0,1) 20%,rgba(255,227,167,1) 25%, #000 26%, #000 28%, rgba(255,227,167,1) 29%, rgba(253,187,45,1) 45%,rgba(157,106,0,1) 51%, #000 52%, #000 54%, rgba(157,106,0,1) 55%, rgba(253,187,45,1) 75%, #000 76%, #000 78%,rgba(253,187,45,1) 79%, rgba(255,227,167,1) 83%, rgba(157,106,0,1) 98%);
   font-size: 2em;
   background-clip: text;
@@ -274,9 +349,6 @@ p::selection{
   
 }
 
-/* .item-input{
-  position: relative;
-} */
 
 .input-locked{
   position: relative;
@@ -301,7 +373,6 @@ p::selection{
 
 .log-in-button{
   width: 100%;
-  /* font-size: 1.8em; */
   padding: 20px;
   border: none;
   background-color: transparent;
@@ -323,7 +394,6 @@ p::selection{
 
 .log-in-container{
   display: flex;
-  /* margin: 0 38%; */
 }
 
 .log-in-icon{
@@ -333,7 +403,6 @@ p::selection{
   text-decoration: none;
   font-size: 30px;
   position: relative;
-  /* background-color: #141414aa; */
 }
 
 
@@ -343,18 +412,4 @@ p::selection{
   align-self: center;
 }
 
-/* .iconify{
-  font-size: 1em;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-} */
 
-
-/* 
-.log-in-icon{
-  justify-content: space-evenly;
-}
-.log-in-text{
-  justify-content: space-evenly;
-} */
