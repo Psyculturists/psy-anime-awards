@@ -142,7 +142,6 @@ p::selection{
   transform: rotate(45deg);
   margin-top: 3px;
   user-select: none;
-  
 }
 
 .nav-bar a{
@@ -233,21 +232,6 @@ p::selection{
   animation-direction: alternate;
 }
 
-/* .effect::before{
-  content:'';
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  z-index: -1;
-  rotate: 45deg;
-  align-self: center;
-
-  border: 1.5px solid #ffad00;
-  border-radius: 100%;
-  box-shadow: inset 0px 0px 20px 9px #ffad00aa;
-  animation: size-animation 8s ease-out infinite, rotation-animation 2s ease infinite;
-} */
-
 @keyframes size-animation {
   0% {
     height: 5px;
@@ -286,23 +270,8 @@ p::selection{
   padding: 20px;
   box-shadow: inset 0px 0px 12px 2px #000;
 
-
-  /* background: linear-gradient(300deg,blue,white);
-  background-size: 120% 120%;
-  animation: gradient-animation 2s ease infinite; */
 }
 
-/* @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
 
 .item-name{
   width: 100%;
@@ -405,11 +374,210 @@ p::selection{
   position: relative;
 }
 
-
-
 .log-in-text{
   font-size: 2em;
   align-self: center;
 }
 
+.bio-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5vmax;
+  gap: 5vmax;
+  justify-content: center;
+}
 
+
+.item-bio{
+  /* background-color: #00000088; */
+  /* margin: 0 5%; */
+  flex-grow: 1;
+  flex-basis: 250px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  overflow: hidden;
+  
+  /* padding: 40px; */
+}
+
+.img-bio-container{
+  height: 40vmin;
+}
+
+.img-bio{
+  
+  /* background-color: #0c0d18; */
+  /* overflow: hidden; */
+  width: min-content;
+  offset-position: 50% 55%;
+  offset-path: ray(45deg);
+  position: relative;
+  /* margin-bottom: 50%; */
+  /* overflow: hidden; */
+
+}
+
+.bio-decoration{
+  width: 20vmin;
+  overflow: hidden;
+
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-decoration::before{
+  content: '';
+  position: absolute;
+  background-color: #0c0d18;
+  /* overflow: hidden; */
+  box-shadow: -6px 7px 20px 3px #000;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-left: 1.5px solid #004eff;
+  border-top: 1.5px solid #004eff;
+  border-right: 1.5px solid #ffad00;
+  border-bottom: 1.5px solid #ffad00;
+}
+
+
+.bio-decoration::after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-left: 1.5px solid #004eff;
+  border-top: 1.5px solid #004eff;
+  border-right: 1.5px solid #ffad00;
+  border-bottom: 1.5px solid #ffad00;
+}
+
+.img-bio-container:hover .bio-decoration::before{
+  transform: rotate(360deg);
+  transition: transform 1s;
+}
+
+.img-bio-container:hover .bio-decoration::after{
+  transform: rotate(-360deg);
+  transition: transform 1s;
+}
+
+.img-bio-container:hover .bio-image{
+  transform: rotate(-45deg);
+  offset-position: 50% 65%;
+  width: 100%;
+  height: auto;
+}
+
+.img-bio-container:hover .img-bio{
+  offset-position: 50% 50%;
+  transform: rotate(45deg);
+  /* border-radius: 100%; */
+
+}
+
+.img-bio-container:hover .bio-decoration{
+  overflow:hidden;
+  /* aspect-ratio: 1/1; */
+  height: 30vmin;
+  width: 30vmin;
+  /* transform: rotate(-45deg); */
+  /* max-height: 25vmin; */
+}
+
+.img-bio-container:hover + .bio-info .bio-description{
+    color: white;
+}
+
+
+.bio-image{
+  /* display: none; */
+  /* z-index: -1; */
+  background-color: #f1c462;
+  /* aspect-ratio: 1/1; */
+  /* width: 100px; */
+  /* justify-content: stretch; */
+  /* height: 100px; */
+  /* width: 150%; */
+  height: 200%;
+  offset-position: 45% 55%;
+  /* offset-position: 45% 55%; */
+  offset-path: ray(135deg);
+  /* max-height: 200px; */
+  /* transform: rotate(45deg); */
+  /* margin-top: 10px; */
+  user-select: none;
+}
+
+.bio-info{
+  /* background-color: #f1c462; */
+  /* background-color:#f1c462; */
+  /* offset-position: 50% 120%;
+  offset-path: ray(90deg); */
+  position: relative;
+  display: block;
+}
+
+.bio-name{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.bio-name h2{
+  margin: 0px;
+}
+
+.bio-description{
+  color: transparent;
+  text-align: center;
+}
+
+.partners-body{
+  padding: 8% 0;
+}
+
+
+.section-title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-title h1{
+  
+  text-transform: uppercase;
+  background-image: linear-gradient(180deg, rgba(255,227,167,1) 0%, rgba(253,187,45,1) 8%, rgba(157,106,0,1) 20%,rgba(255,227,167,1) 25%, #000 26%, #000 28%, rgba(255,227,167,1) 29%, rgba(253,187,45,1) 45%,rgba(157,106,0,1) 51%, #000 52%, #000 54%, rgba(157,106,0,1) 55%, rgba(253,187,45,1) 75%, #000 76%, #000 78%,rgba(253,187,45,1) 79%, rgba(255,227,167,1) 83%, rgba(157,106,0,1) 98%);
+  font-size: 3em;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title::before{
+  content:  "";
+  display: flex;
+  height: 0.05em;
+  width: 100%;
+  margin: 20px;
+  position: relative;
+  align-self: center;
+  background-image: linear-gradient(270deg,#004eff 0%,#004eff 5%,#004eff 45%,#004eff 55%,rgb(0, 78, 255) 95%, black 100%);
+  
+}
+
+.section-title::after{
+  content:  "";
+  display: flex;
+  height: 0.05em;
+  width: 100%;
+  margin: 20px;
+  position: relative;
+  align-self: center;
+  background-image: linear-gradient(270deg,black 0%,#ffad00 5%,#ffad00 45%,#ffad00 55%,#ffad00 95%, #ffad00 100%);
+}

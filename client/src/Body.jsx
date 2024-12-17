@@ -1,14 +1,12 @@
 import BodyTitle from "./BodyTitle"
-import Categories from "./Categories"
 
 
-function Body() {
+function Body(props) {
 
   return (
     <div className="body">
-    <BodyTitle />
-    <Categories/>
-    
+      <BodyTitle />
+      {props.content}
     </div>
   )
 }

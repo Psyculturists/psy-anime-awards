@@ -7,7 +7,7 @@ function BodyTitle(){
         <h1 className="title">
           Psy Anime Awards
         </h1>
-        <EffectContainer nameclass="effect-container"/>
+        {/* <EffectContainer nameclass="effect-container"/> */}
         {/* <EffectContainer nameclass="effect-container-rot"/> */}
         {/* <EffectContainer nameclass="effect-container-rot"/> */}
       </div>

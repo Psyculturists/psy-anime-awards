@@ -1,0 +1,26 @@
+[
+    {"title": "Hosts", "items":[
+        {
+            "name": "Euro Brady",
+            "bio": "Euro Brady is a therapist and content creator who provides psychological analysis of games and other media. Though only a casual enjoyer of anime as a youth, Brady has grown to respect and adore the medium for its deep characters, rich themes, and depiction of complex relationships. He has hosted several award shows and events, and finds great joy in sharing his passion for media with others.",
+            "pic_url": "../../assets/images/Brady.webp"
+        }
+    ]},
+    {"title": "Announcers", "items":[
+        {
+            "name": "Pink",
+            "bio": "Superhuman gaming. React Andy extraordinaire. PhD in scream theory. Pink. I love stories across all mediums as looks into creative minds and outlets for emotions and experiences. I believe in the power of investing in fictional characters and the stories they live in order to enrich and broaden our own lives. Spreading, enhancing, and embodying that power is the mission statement.",
+            "pic_url": "../../assets/images/pink.webp"
+        },
+        {
+            "name": "Camilla Scarlet",
+            "bio": "Hi there! I'm Camilla_Scarlet (she/her), though Cami is preferred, an Autistic HybridTuber and Content Creator from Canada! I love to create art through thread, fibres, and dabble in animation too. I am honoured to be an announcer for the Psy anime awards. Nice to meet you!",
+            "pic_url": "../../assets/images/CamillaScarlet.webp"
+        },
+        {
+            "name": "Ffeevee",
+            "bio": "Hi, Hello, How are you? I'm Ffeevee (pronounced like Phoebe). I'm a variety streamer, doing Anime reactions (Thank you Edo!), co-working streams and gameplay here and there. I'm Mexican but I mostly stream in English and I'm learning Korean and Japanese. I love animation which makes me super excited and honored to be an announcer on Psy Anime Awards! Mucho gusto!~",
+            "pic_url": "../../assets/images/ffeevee.webp"
+        }
+    ]}
+]
